@@ -14,7 +14,7 @@ apiVersion: v1
 kind: PersistentVolume
 # PV没有NAMESPACE限制
 metadata:
-  name: pv-test-redis-5gb-ebs-01-vol-029b74bf3ed0e5f5b
+  name: pv-test-redis-5gb-ebs-01-vol-xxxxx
   labels:
     app: test-redis
 spec:
@@ -26,7 +26,7 @@ spec:
     # 文件系统类型
     fsType: ext4
     # 卷ID、需要先在AWS上创建，且与NODE节点保持相同可用区
-    volumeID: aws://ap-northeast-2c/vol-029b74bf3ed0e5f5b
+    volumeID: aws://ap-northeast-2c/vol-xxxxx
   capacity:
     # 存储卷大小、不能超过物理存储大小
     storage: 5Gi
@@ -75,7 +75,7 @@ spec:
       storage: 5Gi
   storageClassName: gp2
   volumeMode: Filesystem
-  volumeName: pv-test-redis-5gb-ebs-01-vol-029b74bf3ed0e5f5b
+  volumeName: pv-test-redis-5gb-ebs-01-vol-xxxxx
 ```
 > 注意：
 ``PVC存储大小不能超过PV存储大小``
