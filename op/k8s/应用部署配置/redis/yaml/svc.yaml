@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-redis-svc
+  namespace: test
+  labels:
+    app: test-redis
+spec:
+  ports:
+  - port: 6379
+    name: test-redis
+    targetPort: 6379
+  selector:
+    app: test-redis
